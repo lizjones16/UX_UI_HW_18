@@ -1,0 +1,187 @@
+body {
+    margin: 0;
+  }
+  header {
+    background-color: #373738;
+    padding: 15px;
+  }
+  header ul {
+    float: right;
+    color: white;
+  }
+  header li {
+    display: inline-block;
+    padding: 0px 5px;
+  }
+  header p {
+    display: inline-block;
+  }
+
+/* My Skills */
+  .flexContainer {
+      display: flex;
+      flex-direction: row;
+      width: 33% 33% 33%;
+      margin-left: 50px;
+      margin-right: 50px;
+      padding: 20px;
+      justify-content: center;
+      
+  }
+  .flexChild{
+      background-color: red;
+      width: 33%;
+  }
+  .left{
+      width: 33%;
+      padding-left: 20px;
+      padding-right: 20px;
+  }
+  .center{
+      width: 33%;
+      padding-left: 20px;
+      padding-right: 20px;
+  }
+  .right{
+      width: 33%;
+      padding-left: 20px;
+      padding-right: 20px;
+  }
+  h1{
+    text-align: center;
+    font-size: 45pt;
+  }
+  h3{
+      font-size: 25pt;
+      text-align: center;
+  }
+
+  p{
+      font-size: 12pt;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+  }
+.img3 {
+  text-align: center;
+}
+
+/* My Work section constructed using CSS Grid*/
+.workGrid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 25% 75%;
+    grid-template-areas: 
+    "aside header"
+    "aside content"
+    ;
+    justify-content: start;
+    height: 300px;
+    margin: 40px;
+}
+.header{
+  display: grid;
+  grid-area: header;
+}
+.content{
+  display: grid;
+  grid-area: content;
+}
+.CTA{
+  display: grid;
+  grid-area: CTA;
+}
+.aside {
+  display: grid;
+  grid-area: aside;
+  padding-right: 10px;
+  padding-left: 20px;
+  height: 300px;
+}
+h4{
+    font-size: 25pt;
+}
+h5{
+    font-size: 12pt;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    padding: 15px;
+    background-color: #373738;
+    color: white;
+    font-size: 15px;
+    border-radius: 4px;
+    width: 150px;
+    height: 50px;
+  }
+
+  .img2 {
+    height: 300px;
+    width: 550px;
+  }
+
+  /* Footer */
+  footer {
+    background-color: #373738;
+    padding: 5px;
+    color: white;
+  }
+  footer ul {
+    list-style: none;
+    padding-left: 5px;
+  }
+  footer li {
+    display: inline-block;
+    padding: 0px 7px;
+  }
+
+/* Mobile Styling */
+
+@media only screen and (max-width:600px) {
+  .flexContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+    justify-content: center;
+    text-align: center;
+  }
+.left{
+    width: 100%;
+}
+.center{
+    width: 100%;
+}
+.right{
+    width: 100%;
+}
+.workGrid{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+  "aside"
+  "aside"
+  "header"
+  "content"
+  ;
+  margin: 40px;
+  overflow: auto;
+}
+.header{
+  display: grid;
+  grid-area: header;
+  width: 100%;
+}
+.content{
+  display: grid;
+  grid-area: content;
+  width: 100%;
+}
+
+.aside {
+  display: grid;
+  grid-area: aside;
+}
+}
